@@ -5,7 +5,10 @@
     <script>
         window.onload = function(){
         for(var index=0;index < window.geemails.length; index++)
-        var (container = document.getElementById('container');
+        var container = document.getElementById('container');
+        var firstHTMLElement = document.createElement('div');
+        firstHTMLElement.innerHTML = window.geemails[index].subject;
+        container.appendChild(firstHTMLElement);
         };
     </script>
 	</head>
