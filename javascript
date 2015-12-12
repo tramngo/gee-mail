@@ -1,8 +1,4 @@
-<html>
-	<head>
-		<script src="js/mail-generator.js"></script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
-    <script>
+
         window.onload = function(){
         date: Date.now(),
         subject: 'Call Your Mother',
@@ -69,17 +65,4 @@
 
 ; 	
         	
-        for(var index=0;index < window.geemails.length; index++)
-        var container = document.getElementById('container');
-        var firstHTMLElement = document.createElement('div');
-        firstHTMLElement.innerHTML = window.geemails[index].subject;
-        container.appendChild(firstHTMLElement);
-        };
-    </script>
-	</head>
-	<body>
-		<div class="container" id="main">
-			Build Me!
-		</div>
-	</body>
-</html>
+       
