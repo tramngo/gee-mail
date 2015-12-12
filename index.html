@@ -70,9 +70,48 @@
     	var subject = 'FW: Token Chain Email'
     	var message = 'I\'m a comfortador also. You\'re a hell of a woman. Passion rules us all. You\'re gonna die screaming but you won\'t be heard. How did your brain ever learn human speech? I\'m callous and strange.'
     	var sender = 'Sue Mee'
-    }
+    };
 
-; 	
+function loadGeeMails(){
+	for (var i = 0; i < 10; i++){
+		var message = generateMessage();
+		window.geemails.push(message);
+	}
+}
+
+function generateMessage(date){
+	var message = {};
+	message.date = date || getRandomDate();
+	message.subject = getRandomElement(subject);
+	message.sender = getRandomElement(sender);
+	message.body = getRandomElement(body);
+	return message;
+}
+
+function getRandomElement(arr){
+	return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function getNewMessage(){
+	var now = new Date();
+	return generateMessage(now);
+}
+
+function getRandomDate(){
+	var year = 2013;
+	var month = Math.floor(Math.random() * 12) + 1;
+	var day = Math.floor(Math.random() * 30) + 1;
+	var hours = Math.floor(Math.random() * 12) + 1;
+	var minutes = Math.floor(Math.random() * 59) + 1;
+	return new Date(year, month, day, hours, minutes);
+}
+
+//load intial GeeMail data to window object
+(function(){
+	window.geemails = [];
+	loadGeeMails();	
+})();
+	
       
     </script>
 	</head>
