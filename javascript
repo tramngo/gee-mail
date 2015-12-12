@@ -1,4 +1,3 @@
-
         window.onload = function(){
         date: Date.now(),
         subject: 'Call Your Mother',
