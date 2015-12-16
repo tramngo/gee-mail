@@ -6,9 +6,9 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
-      window.onload = function(){
+     
+      
+    {
         date: Date.now(),
         var subject = 'Call Your Mother'
         var message = 'I am never gonna see a merman, ever. You haven\'t seen my drawer of inappropriate starches?'
@@ -110,14 +110,28 @@ function getRandomDate(){
 (function(){
 	window.geemails = [];
 	loadGeeMails();	
-})();
-	
+}
+
+	setInterval (
+		function addNewMessage(){
+		var newMessage = getNewMessage();
+		displayMessage(newMessage); 
+		console.log(newMessage)};
+
+//inbox count 
+function inboxCount (){
+	 var count = document.getElementById("count");  
+ 	 var inboxCount = window.geemails.length;  
+ 	 var counter = document.createTextNode(inboxCount);  
+         count.appendChild(counter);  
+}
       
     </script>
 	</head>
 	<body>
 		<div class="container" id="main">
-			Build Me!
+	<h1> Gee-Mail </h1>	
+	<h2> Total Messages: <p id='count'></p></h2>
 		</div>
 	</body>
 </html>
