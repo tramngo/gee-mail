@@ -59,11 +59,12 @@ function inboxTotal (){
          count.appendChild(counter);  
 }
     
-	//Sets Interval to get new message 
+	//Sets Interval to get new message every 9 seconds
 function oneInterval (){
 	var newMessage = getNewMessage();
 	var entireMessage = document.getElementById("box"); 
 	entireMessage.appendChild(newMessage);
+	
 	totalEmails++;
 	count.innerHTML = inboxCount;
 	console.log(yourFlaggedMail);
