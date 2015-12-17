@@ -7,30 +7,51 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
     
-    function createEmails (createMessage){
-    	for (var i = 0; i < window.geemails.length; i++)
-    }
+    	// Creates inbox
+    	var inbox = document.createElement ('div');
+    	inbox.className = 'inbox'
+    	inbox.innerHTML = "You have" + inboxCount () + "gee-mails"
     
-    	var Date = createMessage[i].date;
-    	var Subject = createMessage[i].subject;
-    	var Sender = createMessage[i].sender;
-    	var Body = createMessage[i].body; 
+	 // Accesses date, subject, sender, and body arrays to display list of e-mails
+    function displayMessage (message){
+    	for (var i = 0; i < window.geemails.length; i++)}
+    
+         // Retrieves dates, subjects, senders, and body from array
+    	var Date = message.date;
+    	var Subject = message.subject;
+    	var Sender = message.sender;
+    	var Body = message.body; 
     	
+    	// Creates div for each new line date, subject, sender, and body 
+    	var newLine = document.createElement ('div')
+    	newLine.className = 'new_line'
+    	document.getElementById('box').appendChild(newLine);
+    	
+    	var dateElement = document.createElement ('div')
+    	dateElement.className = 'info'
+    	var nodeDate = document.getElementsByClassName('new_line')[geemails.length -1]
+    	nodeDate.appendChild(dateElement);
+    	dateElement.innerHTML = emailDate;
+    	
+    	var subjectElement = document.createElement ('div')
+    	subjectElement.className = 'info'
+        var nodeSubject = document.getElementsByClassName('new_line')[geemails.length -1]
+    	nodeSubject.appendChild(subjectElement);
+    	subjectElement.innerHTML = emailSubject;
+    	
+    	var senderElement = document.createElement ('div')
+    	senderElement.className = 'info'
+    	var nodeSender = document.getElementsByClassName('new_line')[geemails.length -1]
+    	nodeSender.appendChild(senderElement);
+    	senderElement.innerHTML = emailSender;
+    	
+    	var bodyElement = document.createElement ('div')
+    	bodyElement.ClassName = 'info'
+    	var nodeBody = document.getElementsByClassName('new_line')[geemails.length -1]
+    	nodeBody.appendChild(bodyElement);
+    	bodyElement.innerHTML = emailBody;
     
-    
-    
-    {	var inbox = "Gee-mail Inbox";
-    	var table = document.createElement("table")
-    
-
-	
-    {	var yourFlaggedMail = retrieveEmail(window.geemails.[i]); 
-	var emailSpace = document.getElementbyId("box")
-	emailSpace.appendChild(yourFlaggedMail);
-	console.log(window.geemails.[i]);
-    }
-    
-//inbox count 
+	//Creates inbox count 
 function inboxTotal (){
 	 var count = document.getElementById("count");  
  	 var inboxCount = window.geemails.length;  
@@ -38,34 +59,21 @@ function inboxTotal (){
          count.appendChild(counter);  
 }
     
-//Set Interval to get new message 
+	//Sets Interval to get new message 
 function oneInterval (){
 	var newMessage = getNewMessage();
-	var yourFlaggedMail = retrieveEmail(newMessage);
 	var entireMessage = document.getElementById("box"); 
-	entireMessage.appendChild(yourFlaggedMail);
+	entireMessage.appendChild(newMessage);
 	totalEmails++;
 	count.innerHTML = inboxCount;
 	console.log(yourFlaggedMail);
 	setInterval (oneInterval, 9000);
-}
-
-
-	
-	
-	
-	
-      
-  
-
-
       
     </script>
 	</head>
 	<body>
 		<div class="container" id="main">
-	<h1> Gee-Mail </h1>	
-	<h2> Total Messages: <p id='count'></p></h2>
+	<h1> Gee-Mail </h1>
 		</div>
 	</body>
 </html>
